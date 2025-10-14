@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-// import Login from './screens/login/login';
-// import Register from './screens/register/register';
+import Login from './screens/login/login';
+import Register from './screens/register/register';
 import Dashborad from './screens/dashborad/dashboard';
 import logo from './logo.png';
 
