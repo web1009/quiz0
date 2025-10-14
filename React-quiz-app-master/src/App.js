@@ -14,22 +14,26 @@ class App extends Component {
     const savedPage = localStorage.getItem('currentPage') || 'login';
 
     this.state = {
-      user: isLoggedIn,      // 로그인 상태
-      login: !isLoggedIn && savedPage === 'login',
-      register: !isLoggedIn && savedPage === 'register',
       quizzes: [
-        { date: '2025-10-16', name: '1', formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSeqBNO7RnbAoeguIG53SHg_5sJIX22rHuXXRWbkjbPU-SdB3w/viewform' },
+        { date: '2025-10-16', name: '1', formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSeqBNO7RnbAoeguIG53SHg_5sJIX22rHuXXRWbkjbPU-SdB3w/viewform',
+          answer: `
+📘 Tema: El reino de Dios y el reino del mundo
+
+1. ¿Qué diferencia hay entre los dos reinos?
+2. ¿Cómo llega el reino de Dios?
+3. ¿Qué señales lo acompañan?
+
+✅ Respuesta sugerida:
+1. El reino de Dios está guiado por la palabra y justicia; el mundo por deseos humanos.
+2. Llega cuando se cumple la profecía (Dn 2:44).
+3. Hay cumplimiento, entendimiento de la palabra, y frutos espirituales.
+          `
+         },
         { date: '2025-10-20', name: '2', formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLScQm9d8Zx6Jh3Z1RqtvO-xyz123/viewform' },
         { date: '2025-10-23', name: '3', formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSeJk3xyz456/viewform' }
       ],
       pageStack: [savedPage]
     };
-
-    // 바인딩
-    this.navabar = this.navabar.bind(this);
-    this.registerPage = this.registerPage.bind(this);
-    this.loginPage = this.loginPage.bind(this);
-    this.dashboradPage = this.dashboradPage.bind(this);
   }
 
   // Navbar
@@ -45,32 +49,14 @@ class App extends Component {
   }
 
   // 페이지 전환 함수
-  registerPage() {
-    localStorage.setItem('currentPage', 'register');
-    this.setState({ login: false, register: true, user: false, pageStack: ['register'] });
-  }
-
-  loginPage() {
-    localStorage.setItem('currentPage', 'login');
-    this.setState({ login: true, register: false, user: false, pageStack: ['login'] });
-  }
-
-  dashboradPage() {
-    localStorage.setItem('currentPage', 'dashboard');
-    this.setState({ login: false, register: false, user: true, pageStack: ['dashboard'] });
-  }
-
-  render() {
-    const { user, login, register, quizzes } = this.state;
+ render() {
+    const { quizzes } = this.state;
 
     return (
       <div className="App">
-        <this.navabar />
+        {this.navabar()}
         <br />
-
-        {!user && login && <Login registerPage={this.registerPage} dashboardPage={this.dashboradPage} />}
-        {!user && register && <Register loginPage={this.loginPage} />}
-        {user && <Dashborad list={quizzes} />}
+        <Dashborad list={quizzes} />
       </div>
     );
   }
