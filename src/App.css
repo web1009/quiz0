@@ -1,0 +1,82 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+/* Dashboard 테이블 스타일 */
+.table {
+  width: 90%;           /* 테이블 너비 */
+  margin: 20px auto;    /* 중앙 정렬 + 위아래 여백 */
+  border-collapse: separate; /* 테두리 겹치지 않게 */
+  border-spacing: 0 10px;    /* 행 사이 간격 */
+}
+
+.table th, .table td {
+  padding: 20px 15px;       /* 높이와 넓이 증가 */
+  font-size: 16px;           /* 글자 크기 */
+  text-align: center;        /* 텍스트 가운데 정렬 */
+  vertical-align: middle;    /* 수직 가운데 정렬 */
+  border: 1px solid #dee2e6; /* 테두리 */
+}
+
+.table th {
+  background-color: #f8f9fa; /* 헤더 색상 */
+  font-weight: 600;
+}
+
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+
+@font-face {
+  font-family: newfont;
+  src: url(font.woff2);
+}
+
+*{
+
+  font-family: newfont;
+
+}
+
+.card:hover {
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+
+.card{
+
+  margin: 5px;
+  border-radius: 10px;
+}
+
+
+
+.card-title {
+  margin-top:0px;
+  font-weight: 700;
+  font-size: 1.65em;
+}
