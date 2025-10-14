@@ -51,12 +51,12 @@ class App extends Component {
     const { quizzes } = this.state;
 
     return (
-      <div> {/* 최상위 div */}
+      <div> 
         {/* 배경 div */}
-         <div
+         {/* <div
           className="background"
           style={{ backgroundImage: `url(${backImage})` }}
-        ></div>
+        ></div> */}
 
         <div className="App">
           {this.navabar()}
