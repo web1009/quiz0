@@ -25,15 +25,14 @@ export default class Dashboard extends Component {
 
     return (
       <div className="container">
-        <h1 className="mt-4 mb-4">Quiz List</h1>
 
         <table className="table table-striped">
           <thead>
             <tr>
-              <th>Date</th>
-              <th>Quiz Name</th>
-              <th>Start Quiz</th>
-              <th>Answer</th>
+              <th>Fecha</th>
+              <th>Sesión</th>
+              <th>Empezar</th>
+              <th>Revisar</th>
             </tr>
           </thead>
           <tbody>
@@ -46,7 +45,7 @@ export default class Dashboard extends Component {
                     className="btn btn-success"
                     onClick={() => window.open(quiz.formUrl, "_blank")}
                   >
-                    Start Quiz
+                    Empezar
                   </button>
                 </td>
                 <td>
@@ -54,7 +53,7 @@ export default class Dashboard extends Component {
                     className="btn btn-primary"
                     onClick={() => this.openModal(quiz.answer)}
                   >
-                    Answer
+                    Revisar
                   </button>
                 </td>
               </tr>
@@ -68,7 +67,7 @@ export default class Dashboard extends Component {
             <div className="modal-dialog modal-lg">
               <div className="modal-content">
                 <div className="modal-header">
-                  <h5 className="modal-title">Answer</h5>
+                  <h5 className="modal-title">Revisar</h5>
                   <button type="button" className="btn-close" onClick={this.closeModal}></button>
                 </div>
                 <div className="modal-body" style={{ whiteSpace: 'pre-line' }}>
