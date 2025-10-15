@@ -15,7 +15,7 @@
 @media (max-width: 768px) {
   .banner {
     background-position: center top;   /* 모바일에서는 상단 중심으로 */
-    margin: 100px auto 60px auto; 
+    margin: 180px auto 60px auto; 
     background-size: cover;            /* 화면 채우기 유지 */
   }
 }
@@ -24,7 +24,7 @@
 @media (max-width: 480px) {
   .banner {
     background-position: center 10%;   /* 모바일 최적 위치 조정 */
-    margin: 100px auto 60px auto; 
+    margin: 180px auto 60px auto; 
     background-size: 120% auto;        /* 가로 약간 확대 */
   }
 }
