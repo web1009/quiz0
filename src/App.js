@@ -53,10 +53,10 @@ class App extends Component {
     return (
       <div> 
         {/* 배경 div */}
-         {/* <div
+         <div
           className="background"
           style={{ backgroundImage: `url(${backImage})` }}
-        ></div> */}
+        ></div>
 
         <div className="App">
           {this.navabar()}
