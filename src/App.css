@@ -7,13 +7,14 @@
     background-size: 77% 20%;
     background-image: url('back.jpg'); 
     background-repeat: no-repeat;
-    background-position: center 12%;
+    background-position: center top;
     z-index: -1;          /* 내용 뒤로 배치 */
 }
 
 /* 화면 폭이 768px 이하(태블릿/모바일)일 때 */
 @media (max-width: 768px) {
   .banner {
+    margin: -30px auto 30px auto;
     background-position: center top;   /* 모바일에서는 상단 중심으로 */
     background-size: cover;            /* 화면 채우기 유지 */
   }
@@ -22,6 +23,7 @@
 /* 화면 폭이 480px 이하(작은 모바일) */
 @media (max-width: 480px) {
   .banner {
+    margin: -30px auto 30px auto;
     background-position: center 20%;   /* 모바일 최적 위치 조정 */
     background-size: 120% auto;        /* 가로 약간 확대 */
   }
@@ -60,7 +62,7 @@
 /* Dashboard 테이블 스타일 */
 .table {
   width: 90%;                 /* 테이블 너비 */
-  margin: 150px auto 60px auto; 
+  margin: 0 auto 60px auto; 
   border-collapse: separate;   /* 테두리 겹치지 않게 */
   border-spacing: 0 10px;      /* 행 사이 간격 */
   background-color: #ffffff;   /* 테이블 배경 흰색 */
