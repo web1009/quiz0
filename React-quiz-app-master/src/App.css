@@ -17,6 +17,7 @@
     background-position: center top;   /* 모바일에서는 상단 중심으로 */
     margin: 180px auto 60px auto; 
     background-size: cover;            /* 화면 채우기 유지 */
+    margin-bottom: 0;
   }
 }
 
@@ -26,6 +27,7 @@
     background-position: center 10%;   /* 모바일 최적 위치 조정 */
     margin: 180px auto 60px auto; 
     background-size: 120% auto;        /* 가로 약간 확대 */
+    margin-bottom: 0;
   }
 }
 
@@ -68,6 +70,7 @@
   background-color: #ffffff;   /* 테이블 배경 흰색 */
   box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* 살짝 그림자 추가 (선택) */
   border-radius: 8px;          /* 모서리 둥글게 (선택) */
+  margin-top: 0;
 }
 
 .table th, .table td {
