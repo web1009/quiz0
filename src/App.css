@@ -1,5 +1,5 @@
 .background {
-    position: fixed;      /* 스크롤해도 고정 */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -8,34 +8,35 @@
     background-image: url('back.jpg'); 
     background-repeat: no-repeat;
     background-position: center 9%;
-    z-index: -1;          /* 내용 뒤로 배치 */
+    z-index: -1;
 }
 
-/* 화면 폭이 768px 이하(태블릿/모바일)일 때 */
+/* 모바일/태블릿 백그라운드 최적화 */
 @media (max-width: 768px) {
-  .banner {
-    background-position: center top;   /* 모바일에서는 상단 중심으로 */
-    margin: 180px auto 60px auto; 
-    background-size: cover;            /* 화면 채우기 유지 */
-    margin-bottom: 0;
+  .background {
+    background-size: cover;
+    background-position: center top;
+  }
+  .table {
+    margin-top: 60px;
+    margin-bottom: 30px;
   }
 }
-
-/* 화면 폭이 480px 이하(작은 모바일) */
 @media (max-width: 480px) {
-  .banner {
-    background-position: center 10%;   /* 모바일 최적 위치 조정 */
-    margin: 180px auto 60px auto; 
-    background-size: 120% auto;        /* 가로 약간 확대 */
-    margin-bottom: 0;
+  .background {
+    background-size: cover;
+    background-position: center top;
+  }
+  .table {
+    margin-top: 40px;
+    margin-bottom: 20px;
   }
 }
 
 .content {
     position: relative;
-    z-index: 1;           /* 내용이 위로 오도록 */
+    z-index: 1;
 }
-
 
 .App {
   text-align: center;
@@ -63,37 +64,34 @@
 
 /* Dashboard 테이블 스타일 */
 .table {
-  width: 90%;                 /* 테이블 너비 */
-  margin: 150px auto 60px auto; 
-  border-collapse: separate;   /* 테두리 겹치지 않게 */
-  border-spacing: 0 10px;      /* 행 사이 간격 */
-  background-color: #ffffff;   /* 테이블 배경 흰색 */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* 살짝 그림자 추가 (선택) */
-  border-radius: 8px;          /* 모서리 둥글게 (선택) */
+  width: 90%;
+  margin: 150px auto 60px auto;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 8px;
   margin-top: 10;
 }
 
 .table th, .table td {
-  padding: 20px 15px;          /* 높이와 넓이 증가 */
-  font-size: 16px;             /* 글자 크기 */
-  text-align: center;          /* 텍스트 가운데 정렬 */
-  vertical-align: middle;      /* 수직 가운데 정렬 */
-  border: 1px solid #dee2e6;  /* 테두리 */
-  background-color: #ffffff;   /* 셀 배경도 흰색 */
+  padding: 20px 15px;
+  font-size: 16px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #dee2e6;
+  background-color: #ffffff;
 }
 
 .table th {
-  background-color: #f8f9fa;   /* 헤더 색상 */
+  background-color: #f8f9fa;
   font-weight: 600;
 }
-
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-
-
 
 @font-face {
   font-family: newfont;
@@ -101,9 +99,7 @@
 }
 
 *{
-
   font-family: newfont;
-
 }
 
 .card:hover {
@@ -111,11 +107,9 @@
 }
 
 .card{
-
   margin: 5px;
   border-radius: 10px;
 }
-
 
 .card-title {
   margin-top:0px;
