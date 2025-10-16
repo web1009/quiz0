@@ -14,21 +14,35 @@ class App extends Component {
 
     this.state = {
       quizzes: [
-        { date: '2025-10-16', name: '1', formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSeqBNO7RnbAoeguIG53SHg_5sJIX22rHuXXRWbkjbPU-SdB3w/viewform',
-          answer: `
-📘 Tema: El reino de Dios y el reino del mundo
+        { date: '2025-10-16', name: '1', formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfWfVNwuB_nnrdzB9NKp5mTFFuL_1Yoon-N-4r4o_nD3fUG1w/viewform',
+          answer: `Página en preparación`
+// `⭐️ 10/16 Tema de la lección y pregunta de reflexión
 
-1. ¿Qué diferencia hay entre los dos reinos?
-2. ¿Cómo llega el reino de Dios?
-3. ¿Qué señales lo acompañan?
+// 📘 Tema de la lección: Un Corazón Puro 
+// 📜 Versículos de referencia: Sal86:11
 
-✅ Respuesta sugerida:
-1. El reino de Dios está guiado por la palabra y justicia; el mundo por deseos humanos.
-2. Llega cuando se cumple la profecía (Dn 2:44).
-3. Hay cumplimiento, entendimiento de la palabra, y frutos espirituales.
-          `
+// ✏️ Pregunta para reflexionar : 
+// 1. ¿Como puedo tener un corazón puro?
+
+// 2. ¿Por qué es importante delante de Dios tener un corazón puro?
+
+// 3. ¿Como puedo llegar al cielo, según la clase vista?
+
+// 4. ¿Como un creyente puede ver a Dios?
+
+// ✅ Respuesta sugerida :
+// 1. Al guardar la palabra de Dios 
+
+// 2. Para poder hacer la voluntad de Dios.
+
+// 3. Corazón puro --> voluntad de Dios --> reino de los cielos 
+
+// 4. Mt5:8 Corazón limpió al guardar la palabra.`
          },
-        { date: '2025-10-20', name: '2', formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLScQm9d8Zx6Jh3Z1RqtvO-xyz123/viewform' }
+        { date: '2025-10-20', name: '2', formUrl: ' ',
+          answer: `Página en preparación`
+         }
+      
       ],
       pageStack: [savedPage]
     };
