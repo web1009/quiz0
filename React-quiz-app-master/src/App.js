@@ -68,16 +68,11 @@ class App extends Component {
     const { quizzes } = this.state;
 
     return (
-      <div>
-        {/* 배경 div */}
-        <div
-          className="background"
-          style={{ backgroundImage: `url(${backImage})` }}
-        ></div>
-
-        <div className="App">
-          {this.navabar()}
-          <br />
+      <div className="App">
+        {this.navabar()}
+        <br />
+        <div className="table-container">
+          <div className="top-banner" />
           <Dashborad list={quizzes} />
         </div>
       </div>
