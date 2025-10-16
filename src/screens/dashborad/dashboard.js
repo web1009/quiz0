@@ -1,6 +1,7 @@
 // screens/dashboard/dashboard.js
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import CustomModal from './customModal';
 
 export default class Dashboard extends Component {
   constructor(props) {
@@ -62,24 +63,11 @@ export default class Dashboard extends Component {
         </table>
 
         {/* Modal */}
-        {showModal && (
-          <div className="modal show" style={{ display: 'block', backgroundColor: 'rgba(0,0,0,0.5)' }}>
-            <div className="modal-dialog modal-lg">
-              <div className="modal-content">
-                <div className="modal-header">
-                  <h5 className="modal-title">Revisar</h5>
-                  <button type="button" className="btn-close" onClick={this.closeModal}></button>
-                </div>
-                <div className="modal-body" style={{ whiteSpace: 'pre-line' }}>
-                  {modalContent}
-                </div>
-                <div className="modal-footer">
-                  <button className="btn btn-secondary" onClick={this.closeModal}>Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
+        <CustomModal
+          show={showModal}
+          content={modalContent}
+          onClose={this.closeModal}
+        />
       </div>
     );
   }
