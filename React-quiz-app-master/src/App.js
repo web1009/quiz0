@@ -16,33 +16,59 @@ class App extends Component {
       quizzes: [
         {
           date: '2025-10-16', name: '1', formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfWfVNwuB_nnrdzB9NKp5mTFFuL_1Yoon-N-4r4o_nD3fUG1w/viewform',
-          answer: `Página en preparación`
-          // `⭐️ 10/16 Tema de la lección y pregunta de reflexión
+          answer: 
+          // `Página en preparación`
+          `⭐️ 10/16 Tema de la lección y pregunta de reflexión
 
-          // 📘 Tema de la lección: Un Corazón Puro 
-          // 📜 Versículos de referencia: Sal86:11
+          📘 Tema de la lección: Un Corazón Puro 
+          📜 Versículos de referencia: Sal86:11
 
-          // ✏️ Pregunta para reflexionar : 
-          // 1. ¿Como puedo tener un corazón puro?
+          ✏️ Pregunta para reflexionar : 
+          1. ¿Como puedo tener un corazón puro?
 
-          // 2. ¿Por qué es importante delante de Dios tener un corazón puro?
+          2. ¿Por qué es importante delante de Dios tener un corazón puro?
 
-          // 3. ¿Como puedo llegar al cielo, según la clase vista?
+          3. ¿Como puedo llegar al cielo, según la clase vista?
 
-          // 4. ¿Como un creyente puede ver a Dios?
+          4. ¿Como un creyente puede ver a Dios?
 
-          // ✅ Respuesta sugerida :
-          // 1. Al guardar la palabra de Dios 
+          ✅ Respuesta sugerida :
+          1. Al guardar la palabra de Dios 
 
-          // 2. Para poder hacer la voluntad de Dios.
+          2. Para poder hacer la voluntad de Dios.
 
-          // 3. Corazón puro --> voluntad de Dios --> reino de los cielos 
+          3. Corazón puro --> voluntad de Dios --> reino de los cielos 
 
-          // 4. Mt5:8 Corazón limpió al guardar la palabra.`
+          4. Mt5:8 Corazón limpió al guardar la palabra.`
         },
         {
-          date: '2025-10-20', name: '2', formUrl: ' ',
+          date: '2025-10-20', name: '2', formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfbT7ybZrBCn77W1pQGNHiJqXYFVm50ioBVDdXZHcNxG8tuGw/viewform',
           answer: `Página en preparación`
+// `⭐️ Tema de la lección y pregunta de reflexión
+
+// 📆 Fecha : 25.10.20
+// 📘 Tema de la lección: Una Mente Puesta en las Cosas de Arriba 
+// 📜 Versículos de referencia: Col3:2
+
+// ✏️ Pregunta para reflexionar : 
+// 1. ¿Qué es lo que Dios desea que elijamos?
+
+// 2. ¿Qué son las cosas de Arriba y las cosas de abajo?
+
+// 3. ¿Que es una mente pecaminosa y una mente del espíritu?
+
+// 4. ¿Como puedo recibir vida?
+
+// ✅ Respuesta sugerida :
+// 1. Dt30:19-20 la vida y la bendición 
+
+// 2. • Arriba: Cielo --> Dios 
+// • Abajo: Tierra --> muerte
+
+// 3. • Mente pecaminosa: dedicada solo a las cosas de la carne.
+// • Mente en el espíritu: puesta en las cosas de Dios y el cielo.
+
+// 4. Jn6:63 por medio de la palabra.`
         }
 
       ],
