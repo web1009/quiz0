@@ -42,7 +42,7 @@ class App extends Component {
           4. Mt5:8 Corazón limpió al guardar la palabra.`
         },
         {
-          date: '2025-10-20', name: '2', formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfbT7ybZrBCn77W1pQGNHiJqXYFVm50ioBVDdXZHcNxG8tuGw/viewform',
+          date: '2025-10-20', name: '2', formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSeam56vTDtPclMUPx-3heHiO0dzJqGPIFuv48KTGaywesBZ7A/viewform',
           answer: `Página en preparación`
 // `⭐️ Tema de la lección y pregunta de reflexión
 
