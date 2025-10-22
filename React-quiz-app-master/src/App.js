@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
+import Login from './screens/login/login';
+import Register from './screens/register/register';
 import Dashborad from './screens/dashborad/dashboard';
+import AdminPage from './screens/admin/adminPage';
 import logo from './logo.png';
-import backImage from './back.jpg';
 
 
 class App extends Component {
@@ -10,9 +12,14 @@ class App extends Component {
     super(props);
 
     // 로컬스토리지에서 로그인 상태와 현재 페이지 가져오기
+    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
     const savedPage = localStorage.getItem('currentPage') || 'login';
 
     this.state = {
+      user: isLoggedIn,      // 로그인 상태
+      login: !isLoggedIn && savedPage === 'login',
+      register: !isLoggedIn && savedPage === 'register',
+      admin: false,          // 관리자 페이지 상태
       quizzes: [
         {
           date: '2025-10-16', name: '1', formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfWfVNwuB_nnrdzB9NKp5mTFFuL_1Yoon-N-4r4o_nD3fUG1w/viewform',
@@ -74,6 +81,14 @@ class App extends Component {
       ],
       pageStack: [savedPage]
     };
+
+    // 바인딩
+    this.navabar = this.navabar.bind(this);
+    this.registerPage = this.registerPage.bind(this);
+    this.loginPage = this.loginPage.bind(this);
+    this.dashboradPage = this.dashboradPage.bind(this);
+    this.adminPage = this.adminPage.bind(this);
+    this.backToDashboard = this.backToDashboard.bind(this);
   }
 
   // Navbar
@@ -89,21 +104,54 @@ class App extends Component {
     );
   }
 
-  // 페이지 전환 함수
-  render() {
-    const { quizzes } = this.state;
+ // 페이지 전환 함수
+ registerPage() {
+  localStorage.setItem('currentPage', 'register');
+  this.setState({ login: false, register: true, user: false, pageStack: ['register'] });
+}
 
-    return (
-      <div className="App">
-        {this.navabar()}
-        <br />
-        <div className="table-container">
-          <div className="top-banner" />
-          <Dashborad list={quizzes} />
-        </div>
-      </div>
-    );
+loginPage() {
+  localStorage.setItem('currentPage', 'login');
+  this.setState({ login: true, register: false, user: false, pageStack: ['login'] });
+}
+
+dashboradPage() {
+  localStorage.setItem('currentPage', 'dashboard');
+  this.setState({ login: false, register: false, user: true, admin: false, pageStack: ['dashboard'] });
+}
+
+// 관리자 페이지 함수
+adminPage() {
+  const password = prompt('관리자 비밀번호를 입력하세요:');
+  if (password === 'scj0314') {
+    localStorage.setItem('currentPage', 'admin');
+    this.setState({ login: false, register: false, user: false, admin: true, pageStack: ['admin'] });
+  } else if (password !== null) {
+    alert('비밀번호가 올바르지 않습니다.');
   }
+}
+
+// 대시보드로 돌아가기
+backToDashboard() {
+  localStorage.setItem('currentPage', 'dashboard');
+  this.setState({ login: false, register: false, user: true, admin: false, pageStack: ['dashboard'] });
+}
+
+render() {
+  const { user, login, register, admin, quizzes } = this.state;
+
+  return (
+    <div className="App">
+      <this.navabar />
+      <br />
+
+      {!user && !admin && login && <Login registerPage={this.registerPage} dashboardPage={this.dashboradPage} />}
+      {!user && !admin && register && <Register loginPage={this.loginPage} />}
+      {user && !admin && <Dashborad list={quizzes} adminPage={this.adminPage} />}
+      {admin && <AdminPage backToDashboard={this.backToDashboard} />}
+    </div>
+  );
+}
 }
 
 export default App;

@@ -21,11 +21,24 @@ export default class Dashboard extends Component {
   };
 
   render() {
-    const { list } = this.props;
+    const { list, adminPage } = this.props;
     const { showModal, modalContent } = this.state;
 
     return (
-      <div className="container">
+      <div className="table-container">
+        {/* 1. 관리자 페이지 버튼 맨 위 */}
+        <div style={{ textAlign: 'right', padding: '10px' }}>
+          <button
+            className="btn btn-outline-primary"
+            onClick={adminPage}>
+            Admin
+          </button>
+        </div>
+
+        {/* 2. 배너 (back.jpg) */}
+        <div className="top-banner"></div>
+
+        {/* 3. 테이블 */}
 
         <table className="table table-striped">
           <thead>
